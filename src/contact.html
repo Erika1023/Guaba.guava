@@ -5,21 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-
-    <title>Guaba.guava</title>
+    <title>Contact</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="css/contact.css" />
 </head>
-<body class="bg-gray-100">
-    <header id="headerPlaceholder" class="sticky top-0"></header>
-
-    <div class="container mx-auto mt-20 min-h-screen">
-        <!-- 網頁內容START -->
-        <h2 class="text-2xl font-bold mb-4">聯絡我們</h2>
-        <p>This is the main content of the page.</p>
-        <!-- 網頁內容END -->
+  <body class="bg-[#F7F3E0]">
+    <header id="headerPlaceholder" class="sticky top-0 z-10"></header>
+    <div class="h-screen">
+      <div
+        class="w-full h-4/5 bg-lime-300 bg-opacity-40 bg-[url('img/contact/bg.png')] bg-fixed flex flex-col text-center items-center justify-center gap-16 "
+      >
+        <img class="logo-1" src="img/contact/logo.png" alt="Logo" />
+        <div class="flex flex-col gap-5">
+          <h1 class="text-5xl font-bold font-size: 60px main-color">聯絡瓜芭</h1>
+          <div class="text-xl text-stone-600">
+            <p class="text-1">
+              如果您有任何疑問或需要進一步了解我們的服務，請使用以下方式聯絡我們
+            </p>
+            <p class="text-2">
+              If you have any questions or need further information about our services, please contact us using the following methods.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col">
+        <div class="flex h-auto bg-white rounded-[60px] p-5 mx-20 -mt-24 grid grid-cols-5 gap-1">
+          <div
+            class="w-full h-full p-20 bg-cover bg-center rounded-[50px] bg-[url('./img/contact/green_block.png')] col-span-2 bg-opacity-80 text-white"
+            alt="Green Block"
+          >
+            <p style="font-size: 48px; font-weight: bold;">聯絡資訊</p>
+            <p class="information-1" style="font-size: 32px; font-weight: medium;">Contact Information</p>
+            <i class="fa-solid fa-phone icon-1"></i><span class="phone-number">0921 142-158</span><br>
+            <i class="fa-solid fa-location-dot icon-2"></i><a href="https://maps.google.com/maps?q=404台中市北區北平路二段70號" class="address" target="_blank" rel="noopener noreferrer">404台中市北區北平路二段70號</a><br>
+            <i class="fa-solid fa-clock icon-3"></i><span class="time">週一 ~ 週五：11:00 ~ 21:00</span>
+          </div>
+          <div class="col-span-3 px-20 my-auto">
+            <div class="form-container">
+              <div class="form-wrapper">
+                <form>
+                  <label for="name">姓名</label>
+                  <input type="text" id="name" name="name" placeholder="請輸入您的姓名">
+                </form>
+              </div>
+              <div class="form-wrapper">
+                <form>
+                  <label for="phone">電話號碼</label>
+                  <input type="phone-number" id="phone-number" name="phone-number" placeholder="+886" required>
+                </form>
+              </div>
+            </div>
+            <form class="email-form">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="@gmail.com" required>
+            </form>
+            <form class="message-form">
+              <label for="message">問題與意見</label>
+              <input type="message" id="message" name="message" placeholder="寫下您的想法..." required>
+            </form>
+          </div>
+        </div>
+        <button
+          name="Send"
+          style="letter-spacing: 0.5em; "
+          class="bg-main-color opacity-70 hover:opacity-85 text-white text-3xl font-bold px-28 py-6 rounded-2xl mx-auto my-10 "
+        >
+          傳送
+        </button>
+      </div>
     </div>
-
     <footer id="footerPlaceholder"></footer>
+  </body>
 
     <script>
         // 使用 jQuery 的 load 方法來引入外部文件並插入到對應的 placeholder 中
